@@ -2,35 +2,46 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 #welcome-section {
     display: flex;
+    z-index: 1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: #28292B;
+    background: rgb(0,212,255);
+    background: linear-gradient(48deg, rgba(0,212,255,1) 0%, rgba(1,121,161,1) 0%, rgba(1,78,117,1) 0%, rgba(2,66,104,1) 0%, rgba(1,94,134,1) 0%, rgba(29,66,83,1) 0%, rgba(27,68,87,1) 1%, rgba(34,61,74,1) 3%, rgba(47,49,52,1) 7%, rgba(2,0,36,1) 40%);
 }
 
-header #welcome-section #navbar {
+/* #welcome-section header {
+    height: 70px;
+    width: 100vw;
+} */
+
+#welcome-section header #navbar {
     position: fixed;
     display: flex;
     justify-content: right;
     align-items: center;
     top: 0px;
+    /* right: 0px; */
+    left: 0px;
     height: 70px;
-    width: 100vw;
+    width: 95vw;
     background-color: #BE3144;
-    padding-right: 50px;
+    padding-right: 80px;
+    /* padding-left: 100px; */
 }
 
-header #welcome-section #navbar a {
+#welcome-section header #navbar a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 5px 0px 5px;
+    padding: 0px 10px 0px 10px;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -39,21 +50,159 @@ header #welcome-section #navbar a {
     width: 80px;
 }
 
-header #welcome-section #navbar a:hover {
+#welcome-section header #navbar a:hover {
     background-color: #45567D;
 }
 
-header #welcome-section h1 {
+#welcome-section h1 {
     font-size: 60px;
     color: white;
     margin: 5px;
 }
 
-header #welcome-section p {
+#welcome-section p {
     font-size: 30px;
     font-style: oblique;
     color: #BE3144;
     margin: 5px;
 }
 
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    width: 100vw;
+    background-color: #45567D;
+}
 
+#projects h1 {
+    color: white;
+    margin: 1px 1px 40px 1px;
+}
+
+#projects #bunch_projects {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-bottom: 20px;
+}
+
+#projects #bunch_projects .project-tile a {
+    background-color: #303841;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    /* border-radius: 10px; */
+}
+
+#projects #bunch_projects .project-tile a:hover {
+    box-shadow: 4px 4px 6px rgb(0, 0, 0);
+}
+
+#projects #bunch_projects .project-tile a img{
+    width: 300px;
+    /* border-radius: 10px; */
+}
+
+#profile {
+    position: relative;
+    z-index: -1;
+    background-color: #303841;
+    /* margin-top: 0px; */
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#profile h1 {
+    color: #F0F0F0;
+    font-weight: bold;
+    font-size: 60px;
+    margin: 5px;
+}
+
+#profile p {
+    color: #F0F0F0;
+    font-style: oblique;
+    font-size: 18px;
+    margin: 10px;
+}
+
+#profile #contacts {
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+#profile #contacts a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #F0F0F0;
+}
+
+#profile i {
+    color: white;
+    padding-right: 5px;
+}
+
+#profile footer p {
+    font-style: normal;
+    margin-right: 50px;
+}
+
+#profile footer {
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    bottom: 0px;
+    width: 100vw;
+    height: 100px;
+    border-top: 3px solid #BE3144;
+}
+
+
+@media (max-width: 1040px) {
+    #projects #bunch_projects {
+        flex-wrap: wrap;
+    }
+
+    #profile #contacts {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    #profile h1 {
+        font-size: 30px;
+    }
+
+    #profile p {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    #profile #contacts {
+        margin-bottom: 80px;
+        margin-top: 30px;
+    }
+
+    #profile #contacts a {
+        /* margin-right: 30px; */
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+  }
